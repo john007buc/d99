@@ -8,6 +8,8 @@
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}{
+        <script type="text/javascript" data-main="{{ asset('js/page1.js')|slice(0,-3) }}" src="{{ asset('js/vendor/requirejs/require.js') }}"></script>
+        {% endblock %}
     </body>
 </html>
